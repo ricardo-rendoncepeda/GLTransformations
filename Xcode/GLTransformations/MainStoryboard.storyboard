@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TPQ-Ee-poS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--GLKit View Controller-->
+        <scene sceneID="nQs-Fu-gMh">
+            <objects>
+                <glkViewController autoresizesArchivedViewToFullSize="NO" preferredFramesPerSecond="30" id="TPQ-Ee-poS" customClass="MainViewController" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="16" drawableMultisample="4X" id="xLg-FZ-5xz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="fev-TW-nx0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="ped-aI-NnZ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Cube"/>
+                                    <segment title="Starship"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectModel:" destination="TPQ-Ee-poS" eventType="valueChanged" id="d9P-UC-uwk"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fev-TW-nx0" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Az3-XA-U0h"/>
+                            <constraint firstItem="fev-TW-nx0" firstAttribute="centerX" secondItem="xLg-FZ-5xz" secondAttribute="centerX" type="default" id="MUt-Cm-J3o"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="TPQ-Ee-poS" id="emV-Uz-fn8"/>
+                            <outletCollection property="gestureRecognizers" destination="LgF-Lz-fJg" appends="YES" id="5tO-nr-7UQ"/>
+                            <outletCollection property="gestureRecognizers" destination="HuP-u0-2pP" appends="YES" id="ns4-bs-N4V"/>
+                            <outletCollection property="gestureRecognizers" destination="v72-6U-Tz3" appends="YES" id="5ZF-60-exQ"/>
+                        </connections>
+                    </glkView>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTB-ax-bTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="LgF-Lz-fJg">
+                    <connections>
+                        <action selector="pan:" destination="TPQ-Ee-poS" id="hN9-Zd-z92"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="HuP-u0-2pP">
+                    <connections>
+                        <action selector="pinch:" destination="TPQ-Ee-poS" id="g2Q-Vk-bNE"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="v72-6U-Tz3">
+                    <connections>
+                        <action selector="rotation:" destination="TPQ-Ee-poS" id="tVx-CE-r0X"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="368" y="195"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="MainViewController" superclassName="GLKViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pan:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="pinch:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="rotation:" candidateClass="UIRotationGestureRecognizer"/>
+                <relationship kind="action" name="selectModel:" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
