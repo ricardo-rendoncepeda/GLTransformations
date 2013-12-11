@@ -1,6 +1,6 @@
 README
 
-GLTransformations Version 1.1 (10 December 2013)
+GLTransformations Version 1.2 (11 December 2013)
 Created by Ricardo Rendon Cepeda
 <http://www.rendoncepeda.com/>
 
@@ -18,6 +18,11 @@ The full project includes:
 
 
 VERSION HISTORY
+
+Version 1.2
+---------------
+- Project upgraded to iOS 7.
+- Added image asset catalogs.
 
 Version 1.1
 ---------------

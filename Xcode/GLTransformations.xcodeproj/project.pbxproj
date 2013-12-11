@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEAFC25D1857709700FE62C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAFC25C1857709700FE62C5 /* Images.xcassets */; };
 		AED9622317D517A600A1C003 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED9622217D517A600A1C003 /* UIKit.framework */; };
 		AED9622517D517A600A1C003 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED9622417D517A600A1C003 /* Foundation.framework */; };
 		AED9622717D517A600A1C003 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED9622617D517A600A1C003 /* CoreGraphics.framework */; };
 		AED9622D17D517A600A1C003 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED9622B17D517A600A1C003 /* InfoPlist.strings */; };
 		AED9622F17D517A600A1C003 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED9622E17D517A600A1C003 /* main.m */; };
 		AED9623317D517A600A1C003 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED9623217D517A600A1C003 /* AppDelegate.m */; };
-		AED9623517D517A600A1C003 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AED9623417D517A600A1C003 /* Default.png */; };
-		AED9623717D517A600A1C003 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AED9623617D517A600A1C003 /* Default@2x.png */; };
-		AED9623917D517A600A1C003 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AED9623817D517A600A1C003 /* Default-568h@2x.png */; };
 		AED9624017D517C600A1C003 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED9623F17D517C600A1C003 /* MainStoryboard.storyboard */; };
 		AED9624A17D517E400A1C003 /* cube.c in Sources */ = {isa = PBXBuildFile; fileRef = AED9624317D517E400A1C003 /* cube.c */; };
 		AED9624B17D517E400A1C003 /* cube_decal.png in Resources */ = {isa = PBXBuildFile; fileRef = AED9624517D517E400A1C003 /* cube_decal.png */; };
@@ -31,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AEAFC25C1857709700FE62C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AED9621F17D517A600A1C003 /* GLTransformations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLTransformations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED9622217D517A600A1C003 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AED9622417D517A600A1C003 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,6 +125,7 @@
 				AEE7A3AA17DD04610094AE57 /* Transformations.m */,
 				AED9625517D5184700A1C003 /* Shaders */,
 				AED9624117D517E400A1C003 /* Resources */,
+				AEAFC25C1857709700FE62C5 /* Images.xcassets */,
 				AED9622917D517A600A1C003 /* Supporting Files */,
 			);
 			path = GLTransformations;
@@ -239,9 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED9622D17D517A600A1C003 /* InfoPlist.strings in Resources */,
-				AED9623517D517A600A1C003 /* Default.png in Resources */,
-				AED9623717D517A600A1C003 /* Default@2x.png in Resources */,
-				AED9623917D517A600A1C003 /* Default-568h@2x.png in Resources */,
+				AEAFC25D1857709700FE62C5 /* Images.xcassets in Resources */,
 				AED9624017D517C600A1C003 /* MainStoryboard.storyboard in Resources */,
 				AED9624B17D517E400A1C003 /* cube_decal.png in Resources */,
 				AED9624D17D517E400A1C003 /* starship_decal.png in Resources */,
@@ -340,9 +338,12 @@
 		AED9623D17D517A600A1C003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GLTransformations/GLTransformations-Prefix.pch";
 				INFOPLIST_FILE = "GLTransformations/GLTransformations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -351,9 +352,12 @@
 		AED9623E17D517A600A1C003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GLTransformations/GLTransformations-Prefix.pch";
 				INFOPLIST_FILE = "GLTransformations/GLTransformations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
